@@ -105,11 +105,12 @@ def send_news():
     #     print(SINCERE_WISH % (friend['DisplayName'] or friend['NickName']), friend['UserName'])
     #     time.sleep(.5)
     itchat.auto_login(hotReload=True)  # 热启动，不需要多次扫码登录
+    itchat.get_chatrooms(True)
     print(itchat.get_chatrooms())
-    # friend_name = u'如花'
-    # my_friend = itchat.search_friends(name=friend_name)
-    friend_name = '继续一起聊bug'
-    my_friend = itchat.search_chatrooms(name=friend_name)
+    friend_name = u'如花'
+    my_friend = itchat.search_friends(name=friend_name)
+    # friend_name = '继续一起聊bug'
+    # my_friend = itchat.search_chatrooms(name=friend_name)
     if my_friend is None:
         print(u'没有找到my_friend:' + friend_name)
     else:
@@ -152,7 +153,7 @@ if __name__ == '__main__':
     while True:
         curr_time = time.strftime("%Y-%m-%d %H:%M", time.localtime())
         love_time = curr_time.split(" ")[1]
-        if love_time != "13:14":
+        if love_time == "13:14":
             main()
             time.sleep(60)
         else:
