@@ -3,6 +3,10 @@ import os
 import sys
 #  django-admin startproject mysite
 # python manage.py help
+# python manage.py runserver
+# python manage.py startapp lib
+# python manage.py makemigrations lib
+# python manage.py migrate
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
     try:
